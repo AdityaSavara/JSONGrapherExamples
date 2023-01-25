@@ -9,5 +9,7 @@ ExampleModelRecords includes example JSON records which only have model inputs t
 ExampleSimulators includes a javascript model that can be called from JSONGrapher to execute a simple simulation. More examples may be added in the future.
 
 The zipfiles are simply zips of the individual directories and are made so that new users can download them directly using links from the JSONGrapher Manual.
+The example files must be unzipped before use with www.jsongrapher.com
+JsonGrapher does not work if the input is still in a zip file.
 
 The github repository for JSONGrapherExamples, with the most recent files, can be found at: https://github.com/AdityaSavara/JSONGrapherExamples
