@@ -3,7 +3,8 @@ DataType: DRIFTS__IR__Vibrational_Spectrum,,,,,,
 Chart_label: IR Spectra of CO Adsorption at Room Temperature after Catalyst Oxidation at Different Temperatures,,,,,,
 x_label: Wavenumbers (cm^-1),,,,,,
 y_label: Absorbance (<a.u.>),,,,,,
-"seriesnames: 295 K,423 K,473 K,523 K,573 K,673 K",,,,,,
+"series_names: 295 K,423 K,473 K,523 K,573 K,673 K",,,,,,
+custom_variables:,,,,,,
 x_values,y_1,y_2,y_3,y_4,y_5,y_6
 1951.641,-0.0066,-0.0037,-1.46E-04,6.20E-04,-0.00268,0.03006
 1953.569,-0.00716,-0.00371,-1.60E-04,5.71E-04,-0.00273,0.03001
