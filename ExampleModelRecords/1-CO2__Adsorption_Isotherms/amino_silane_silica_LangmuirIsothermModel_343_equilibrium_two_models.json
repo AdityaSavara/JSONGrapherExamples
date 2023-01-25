@@ -8,7 +8,7 @@
         "shape": "spline",
         "width": 3
       },
-      "name": "CO2 Adsorption on NaX, K_eq = 99.6 (1/bar)",
+      "name": "CO2 Adsorption, K_eq = 99.6 (1/bar)",
       "type": "scatter",
       "x": [],
       "y": [],
@@ -27,7 +27,7 @@
         "shape": "spline",
         "width": 3
       },
-      "name": "CO2 Adsorption on NaX, K_eq = 109.6 (1/bar)",
+      "name": "CO2 Adsorption, K_eq = 109.6 (1/bar)",
       "type": "scatter",
       "x": [],
       "y": [],
