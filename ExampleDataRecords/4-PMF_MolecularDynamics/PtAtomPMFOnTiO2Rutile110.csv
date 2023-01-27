@@ -1,6 +1,6 @@
 ﻿comments: Potential of mean force (PMF) of single Pt atom transport on the TiO2 rutile (110) surface at three different temperatures computed by the steered molecular dynamics (SMD) method with pulling speed of 0.02 Å/ns,,,
 DataType: Diffusion__Pulling__SMD__PMF,,,
-Chart_label: CO2 Adsorption,,,
+Chart_label: PMF for Pt atom transport on TiO2 rutile (110) surface,,,
 x_label: Pulling Distance (Angstrom),,,
 y_label: PMF (kcal/mol),,,
 series_names: 400 K, 600 K, 800 K,,,
