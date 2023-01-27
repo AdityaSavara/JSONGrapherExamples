@@ -3,7 +3,7 @@ DataType: Diffusion__Pulling__SMD__PMF,,,
 Chart_label: CO2 Adsorption,,,
 x_label: Pulling Distance (Angstrom),,,
 y_label: PMF (kcal/mol),,,
-"series_names: 400, 600, 800",,,
+series_names: 400 K, 600 K, 800 K,,,
 custom_variables:,,,
 x_values,y400,y600,y800
 0.039599,0.020679,0.015874,0.021407
