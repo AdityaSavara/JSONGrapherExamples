@@ -1,0 +1,35 @@
+﻿"comments: CH4 Activation over Perovskite Catalysts: True Density and Reactivity of Active Sites. Polo-Garzon, Wu et al. ACS Catal 2022,12,19,11845-11853",
+DataType: CO2_Adsorption___Differential_Enthalpy,
+Chart_label: CO2 Differential Enthalpy of Adsorption,
+x_label: Quantity Adsorbed (μmol/m2),
+y_label: Adsorption_Enthalpy (kJ/mol),
+series_names: SrTiO3,
+custom_variables:,
+x_values,SrTiO3
+0.05547,206.03481
+0.13807,175.50105
+0.56631,158.27305
+0.99147,138.63502
+1.40664,146.81142
+1.80813,139.03103
+2.20376,151.25592
+2.58534,142.12822
+2.95326,140.21193
+3.31705,139.18714
+3.68087,133.06801
+4.03874,136.75931
+4.39576,142.56855
+4.74996,130.7049
+5.10464,133.81181
+5.45752,125.04767
+5.80826,131.99635
+6.13505,84.84064
+6.35192,56.84628
+6.50123,46.42017
+6.61808,38.94254
+6.71532,36.99933
+6.79716,45.90013
+6.87021,44.90997
+7.02597,43.14029
+7.15811,48.45042
+7.27229,53.29011

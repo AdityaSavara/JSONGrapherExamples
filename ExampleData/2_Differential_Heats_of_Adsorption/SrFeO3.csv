@@ -1,0 +1,13 @@
+﻿"comments: CH4 Activation over Perovskite Catalysts: True Density and Reactivity of Active Sites. Polo-Garzon, Wu et al. ACS Catal 2022,12,19,11845-11853",
+DataType: CO2_Adsorption___Differential_Enthalpy,
+Chart_label: CO2 Differential Enthalpy of Adsorption,
+x_label: Quantity Adsorbed (μmol/m2),
+y_label: Adsorption_Enthalpy (kJ/mol),
+series_names: SrFeO3,
+custom_variables:,
+x_values,SrFeO3
+2.16789,150.71123
+4.30823,153.79443
+6.3777,143.09666
+7.99794,102.71411
+9.08953,66.13979

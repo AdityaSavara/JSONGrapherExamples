@@ -1,0 +1,29 @@
+﻿"comments: CH4 Activation over Perovskite Catalysts: True Density and Reactivity of Active Sites. Polo-Garzon, Wu et al. ACS Catal 2022,12,19,11845-11853",
+DataType: CO2_Adsorption___Differential_Enthalpy,
+Chart_label: CO2 Differential Enthalpy of Adsorption,
+x_label: Quantity Adsorbed (μmol/m2),
+y_label: Adsorption_Enthalpy (kJ/mol),
+series_names: SrZrO3,
+custom_variables:,
+x_values,SrZrO3
+0.38403,145.48251
+0.76279,140.6189
+1.14176,154.88342
+1.51808,156.5486
+1.89139,139.7617
+2.26171,119.75345
+2.62428,122.91636
+2.98077,137.20534
+3.32946,158.35839
+3.66135,129.69335
+3.98227,132.09242
+4.28763,116.0414
+4.54864,56.63727
+4.72197,--
+4.85189,--
+5.09055,27.32556
+5.26284,15.14137
+5.38574,28.3031
+5.49514,27.81922
+5.67312,17.10004
+5.83323,13.57737
