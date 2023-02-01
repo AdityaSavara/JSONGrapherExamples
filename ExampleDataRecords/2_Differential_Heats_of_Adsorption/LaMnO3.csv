@@ -1,0 +1,26 @@
+﻿"comments: CH4 Activation over Perovskite Catalysts: True Density and Reactivity of Active Sites. Polo-Garzon, Wu et al. ACS Catal 2022,12,19,11845-11853",
+DataType: CO2_Adsorption___Differential_Enthalpy,
+Chart_label: CO2 Differential Enthalpy of Adsorption,
+x_label: Quantity Adsorbed (μmol/m2),
+y_label: Adsorption_Enthalpy (kJ/mol),
+series_names: LaMnO3,
+custom_variables:,
+x_values,LaMnO3
+0.27628,106.4872
+0.54833,119.32997
+0.81876,124.33456
+1.09207,114.53629
+1.35926,114.99093
+1.62369,115.64612
+1.88606,111.58032
+2.14556,87.68057
+2.369,75.88772
+2.52906,55.23415
+2.63827,34.50484
+2.72153,33.07065
+2.78888,34.43169
+2.84244,29.76105
+2.94246,34.77804
+3.01062,29.76709
+3.06717,22.09044
+3.11708,28.89166
