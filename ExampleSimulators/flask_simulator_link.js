@@ -72,5 +72,19 @@ async function simulate(input) {
         appendToLog(`Error during POST request: ${error.message}`);
     }
 
-    return jsonResponse || log; // Return JSON response if successful, otherwise log
+    
+    // Preparing the return
+    let responseToReturn; // intialize.
+    // Check if jsonResponse exists
+    if (jsonResponse) {
+        responseToReturn = jsonResponse; // Assign JSON response to the variable
+    } else {
+        // Prepend a message to the log indicating an error occurred
+        log.unshift("Error: An error occurred while processing the simulation. This array contains the logs.");
+        responseToReturn = log; // Assign the log to the variable
+    }
+    
+    // Return the response
+    return responseToReturn;
+
 }
