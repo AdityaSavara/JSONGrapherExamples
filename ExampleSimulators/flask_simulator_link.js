@@ -6,7 +6,10 @@ async function simulate(input) {
         console.log(entry); // Optionally output logs to console
     }
     
-    appendToLog(`Input: ${input}`)
+
+    // Log the input JSON object as a string
+    const inputString = JSON.stringify(input, null, 2);
+    appendToLog(`Input as string:\n${inputString}`);
 
     /**
      * Normalizes the entered URL by trimming spaces, removing extra slashes, 
