@@ -26,7 +26,7 @@ function simulate(input) {
     // Prepare the cleaned-up URL for request
     const postCallURL = normalizeHttpsCallURL(httpsCallInput);
     const fullURL = `https://${postCallURL}`;
-    document.getElementById('postFetchingURL').innerText = `Attempting to fetch: ${fullURL}`;
+    appendToLog(`Attempting to fetch: ${fullURL}`);
     appendToLog(`Posting to: ${fullURL}`);
     appendToLog("Wait until you see text with the word 'Response' or the word 'Error'.");
 
