@@ -1,4 +1,4 @@
-function Simulate(input) {
+function simulate(input) {
 
     this.input = input;
 
