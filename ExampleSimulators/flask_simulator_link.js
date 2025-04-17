@@ -19,7 +19,7 @@ async function simulate(input) {
     // Extract `httpsCallInput` from the provided JSON input
     const httpsCallInput = input.simulate?.httpsCallLink?.trim();
     if (!httpsCallInput) {
-        appendToLog("Error: Please enter a valid HTTPS call link.");
+        appendToLog(`Error: Please enter a valid HTTPS call link. Received: ${input.simulate?.httpsCallLink || 'undefined or null'}`);
         return log; // Return the log for debugging or external use
     }
 
