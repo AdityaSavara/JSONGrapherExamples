@@ -5,6 +5,8 @@ async function simulate(input) {
         log.push(entry);
         console.log(entry); // Optionally output logs to console
     }
+    
+    appendToLog(`Input: ${input}`)
 
     /**
      * Normalizes the entered URL by trimming spaces, removing extra slashes, 
