@@ -1,4 +1,4 @@
-function async simulate(input) {
+async function simulate(input) {
     // Internal logging mechanism
     const log = [];
     function appendToLog(entry) {
