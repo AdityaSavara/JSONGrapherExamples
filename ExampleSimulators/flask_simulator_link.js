@@ -1,4 +1,4 @@
-function simulate(input) {
+function async simulate(input) {
     // Internal logging mechanism
     const log = [];
     function appendToLog(entry) {
@@ -45,7 +45,7 @@ function simulate(input) {
 
     try {
         // Perform actual POST request with JSON payload
-        const response = fetch(fullURL, {
+        const response = await fetch(fullURL, {
             method: 'POST',
             mode: 'cors',
             headers: new Headers({
@@ -57,7 +57,7 @@ function simulate(input) {
             body: JSON.stringify(input) // Use the provided `input` data
         });
 
-        const responseStringFromPost = response.text();
+        const responseStringFromPost = await response.text();
         appendToLog(`Response from POST:\n${responseStringFromPost}`);
 
         // JSONify the response string
