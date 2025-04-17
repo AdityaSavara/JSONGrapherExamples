@@ -41,6 +41,8 @@ function simulate(input) {
         appendToLog("Http call with no-cors failed.");
     }
 
+    let jsonResponse = null;
+
     try {
         // Perform actual POST request with JSON payload
         const response = fetch(fullURL, {
@@ -57,9 +59,13 @@ function simulate(input) {
 
         const responseStringFromPost = response.text();
         appendToLog(`Response from POST:\n${responseStringFromPost}`);
+
+        // JSONify the response string
+        jsonResponse = JSON.parse(responseStringFromPost);
+        appendToLog(`JSON Response:\n${JSON.stringify(jsonResponse, null, 2)}`);
     } catch (error) {
         appendToLog(`Error during POST request: ${error.message}`);
     }
 
-    return responseStringFromPost; // Return the log for external usage or debugging
+    return jsonResponse || log; // Return JSON response if successful, otherwise log
 }
