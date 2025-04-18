@@ -47,16 +47,16 @@ async function simulate(input) {
         appendToLog("Http call with no-cors failed.");
     }
 
-    // Perform a cors POST request to the flask server
+    // Perform a cors POST request to the https server
     appendToLog("Attempting cors POST");
     appendToLog("Wait until you see text with the word 'Response' or the word 'Error'.");
     try {
         const postResponse = await fetch(fullURL, { method: 'POST' });
         appendToLog(`Post fetch succeeded: ${postResponse}`);
-        appendToLog("Http call to flask server for POST request passed.");
+        appendToLog("Https call to https server for POST request passed.");
     } catch (error) {
         appendToLog(`Post fetch error: ${error}`);
-        appendToLog("Http call to flask server for POST request failed.");
+        appendToLog("Https call to https server for POST request failed.");
     }
 
     let jsonResponse = null;
