@@ -74,19 +74,21 @@ function simulate(input) {
             predictedValues = this.getPredictedValues(K_eqObj.value, K_eqObj.unit);
         }
 
-        const output = {
-            ...input,
-            x: predictedValues.X,
-            y: predictedValues.Y,
-            x_label: predictedValues.x_label,
-            y_label: predictedValues.y_label,
-        }
+        const output = { ...input }; // Initialize output JSON as a "copy" of input JSON.
+        output.x = predictedValues.X; // fill with array of simulated values
+        output.y = predictedValues.Y; // fill with array of simulated values
+        output.x_label = predictedValues.x_label; // string 
+        output.y_label = predictedValues.y_label; // string;
 
         return {
             success: true,
             message: 'Simulation initialized successfully',
             data: output
         };
+        
+        
+        
+        
     }
 
 
