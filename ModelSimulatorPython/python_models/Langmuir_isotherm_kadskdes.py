@@ -83,39 +83,62 @@ def calculate_K_eq(k_ads, k_des):
     return K_eq_result
 
 if __name__ == "__main__":
-    # Example with input as a JSON-like dictionary.
+    ##### Test with input as a JSON-like dictionary.#####
     input_json_as_dict = {
         "simulate": {
-            "k_ads": "0.5(mol/L)",
-            "k_des": "0.1(s^-1)",
-            "sigma_max": "1.2(<Monolayer>)",
+            "k_ads": "200 (1/(bar * s))",
+            "k_des": "100 (1/s)",
+            "sigma_max": "1.0267670459667 (<Monolayer>)",
             "simulation_function_label": "simulate_Langmuir_by_kadskdes"
             }
         }
-    output_dict = simulate(input_json_as_dict)  # Function can handle strings or dictionaries
-    print("\nOutput from JSON dictionary input: \n", output_dict)
+    output_dict = simulate(input_json_as_dict)  #testing with call to the primary function of this file.
+    #we can make the output look nicer for printing by converting to a string that has indents.
+    output_as_json_string = json.dumps(output_dict, indent=4)
+    print("\nOutput from JSON dictionary input: \n", output_as_json_string)
+
+    ##### Test wtih input from a JSONGrapher file #####
+    # Specify the path to your JSON file
+    JSONGrapher_record_file_path = './https_343_kinetic.json'
+    ### The rest of this code will does not need to be changed. It will always load the simulate field from the first index.##
+    with open(JSONGrapher_record_file_path, 'r') as file:
+        # Load the JSON data into a Python dictionary
+        JSONGrapher_record_dict = json.load(file)
+    #extract the simulate sub-JSON from the first entry in "data", which is (index 0).
+    simulate_dict_from_JSONGrapher_record = JSONGrapher_record_dict["data"][0]['simulate']
+    #Now use this for our input dictionary, recalling that "simulate" must be a key in that dictionary.
+    input_json_as_dict = {"simulate": simulate_dict_from_JSONGrapher_record}
+    output_dict = simulate(input_json_as_dict)  #testing with call to the primary function of this file.
+    #We can make the output look nicer for printing by converting to a string that has indents.
+    output_as_json_string = json.dumps(output_dict, indent=4)
+    print("\nOutput from JSONGrapher file: \n", output_as_json_string)
+
+
 
     # Expected Output:
     # Identical outputs for both inputs:
-    # {
+    #  {
     #     "success": true,
     #     "message": "Simulation completed successfully",
     #     "data": {
     #         "simulate": {
-    #             "k_ads": "0.5(mol/L)",
-    #             "k_des": "0.1(s^-1)",
-    #             "sigma_max": "1.2(<Monolayer>)"
+    #             "simulate": {
+    #                 "k_ads": "200 (1/(bar * s))",
+    #                 "k_des": "100 (1/s)",
+    #                 "sigma_max": "1.0267670459667 (<Monolayer>)",
+    #                 "simulation_function_label": "simulate_Langmuir_by_kadskdes"
+    #             }
     #         },
     #         "x": [
-    #             0.026666666666666665,
-    #             0.06,
-    #             0.10285714285714286,
-    #             0.16,
-    #             0.24,
-    #             0.36,
-    #             0.5599999999999999,
-    #             0.9600000000000002,
-    #             2.1600000000000006
+    #             0.057042613664816666,
+    #             0.1283458807458375,
+    #             0.22002150985000715,
+    #             0.3422556819889,
+    #             0.51338352298335,
+    #             0.7700752844750249,
+    #             1.1978948869611499,
+    #             2.0535340919334004,
+    #             4.620451706850151
     #         ],
     #         "y": [
     #             0.1,
@@ -128,7 +151,7 @@ if __name__ == "__main__":
     #             0.8,
     #             0.9
     #         ],
-    #         "x_label": "Pressure (1/((mol/L)/(s^-1)))",
+    #         "x_label": "Pressure (1/((1/(bar * s))/(1/s)))",
     #         "y_label": "Amount Adsorbed (<Monolayer>)"
     #     }
     # }
