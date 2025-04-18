@@ -65,12 +65,6 @@ def simulate(input_dict):
     output_as_json_dict["data"]["x_label"] = simulation_result["x_label"]
     output_as_json_dict["data"]["y_label"] = simulation_result["y_label"]
 
-
-    #Ensure the output is valid json by converting it back and forth to a string then dictionary.
-    output_as_json_string = json.dumps(output_as_json_dict, indent=4) 
-    output_as_json_dict_checked = json.loads(output_as_json_string)  
-    return output_as_json_dict_checked
-
     #Ensure the output is valid json by converting it back and forth to a string then dictionary.
     output_as_json_string = json.dumps(output_as_json_dict, indent=4) 
     output_as_json_dict_checked = json.loads(output_as_json_string)  
