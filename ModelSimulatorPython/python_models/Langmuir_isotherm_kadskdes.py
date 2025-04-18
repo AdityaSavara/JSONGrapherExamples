@@ -6,7 +6,8 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import units_helper
 
-## The simulate function should expect to receive a JSON-like dictionary or JSON-like string.
+## The function you make should expect to receive a JSON-like dictionary or JSON-like string.
+## You can name this function whatever you want.
 def simulate(input_dict):
     # Ensure the input is valid json by converting it back and forth to a string.
     try:
