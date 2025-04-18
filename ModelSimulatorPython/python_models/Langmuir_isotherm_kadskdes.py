@@ -1,4 +1,5 @@
 import json
+import copy
 #### Add the relative path to the units_helper.parse_units module for convenience ####
 import sys
 import os
@@ -6,16 +7,16 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import units_helper
 
 ## The simulate function should expect to receive a JSON-like dictionary or JSON-like string.
-def simulate(input_data):
+def simulate(input_dict):
     # Ensure the input is valid json by converting it back and forth to a string.
     try:
-        input_data = json.dumps(input_data)
-        input_data = json.loads(input_data)
+        input_dict = json.dumps(input_dict)
+        input_dict = json.loads(input_dict)
     except:
         raise TypeError("Input data is not valid JSON.")
 
     # Extract simulation parameters
-    simulation_parameters = input_data["simulate"]  # Accessing directly
+    simulation_parameters = input_dict["simulate"]  # Accessing directly
 
     # Calculate K_eq from k_ads and k_des
     K_eq_obj = calculate_K_eq(simulation_parameters["k_ads"], simulation_parameters["k_des"])
@@ -31,12 +32,12 @@ def simulate(input_data):
     def get_predicted_values(K_eq_value, K_eq_unit, sigma_max=1, sigma_max_unit="<Monolayer>"):
         x_label = f"Pressure (1/({K_eq_unit}))"
         y_label = f"Amount Adsorbed ({sigma_max_unit})"
-        Y_values = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9] #For our langmuir simulation we use Y to get X in this case. Coverage to calculate pressure.
-        X_values = [sigma_max * y / (K_eq_value * (1 - y)) for y in Y_values]
+        y_values = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9] #For our langmuir simulation we use Y to get X in this case. Coverage to calculate pressure.
+        x_values = [sigma_max * y / (K_eq_value * (1 - y)) for y in y_values]
         
         predicted_values = {
-            "X_values": X_values,
-            "Y_values": Y_values,
+            "x_values": x_values,
+            "y_values": y_values,
             "x_label": x_label,
             "y_label": y_label
         }
@@ -46,28 +47,28 @@ def simulate(input_data):
     # We don't need input_data here, we are just passing it through with the simulation.
     def run_simulation(input_data, K_eq_obj, sigma_max_value_and_units):
         predicted_values = get_predicted_values(K_eq_obj["value"], K_eq_obj["units"], sigma_max_value_and_units["value"], sigma_max_value_and_units["units"])
+        return predicted_values
         
-        simulation_output = {
-            **input_data, #this is optional, just passing back input_data for debugging purposes.
-            "x": predicted_values["X_values"],
-            "y": predicted_values["Y_values"],
-            "x_label": predicted_values["x_label"],
-            "y_label": predicted_values["y_label"]
-        }
-        
-        simulation_result = {
-            "success": True,
-            "message": "Simulation completed successfully",
-            "data": simulation_output
-        }
-        return simulation_result
-
     # Main workflow
-    simulation_result = run_simulation(input_data, K_eq_obj, sigma_max_value_and_units)
+    simulation_result = run_simulation(input_dict, K_eq_obj, sigma_max_value_and_units)
+    #initialize the output dictionary 
+    output_as_json_dict = {}
+    #Add in some messaging that is useful but not necessary.
+    output_as_json_dict["success"] = True
+    output_as_json_dict["message"] = "Simulation completed successfully"
+    #Make a data subfield which starts as a deep copy of the input dictionary.
+    output_as_json_dict["data"] ={}
+    output_as_json_dict["data"]["simulate"] = copy.deepcopy(input_dict) #this returns the inputs we started with.
+    output_as_json_dict["data"]["x"] = simulation_result["x_values"]
+    output_as_json_dict["data"]["y"] = simulation_result["y_values"]
+    output_as_json_dict["data"]["x_label"] = simulation_result["x_label"]
+    output_as_json_dict["data"]["y_label"] = simulation_result["y_label"]
+
+
     #Ensure the output is valid json by converting it back and forth to a string then dictionary.
-    output_as_json_string = json.dumps(simulation_result, indent=4) 
-    output_as_json_dict = json.loads(output_as_json_string)
-    return output_as_json_dict
+    output_as_json_string = json.dumps(output_as_json_dict, indent=4) 
+    output_as_json_dict_checked = json.loads(output_as_json_string)  
+    return output_as_json_dict_checked
 
 # Helper function that Gets the K_eq value and units from k_ads and k_des and their units
 def calculate_K_eq(k_ads, k_des):
@@ -94,11 +95,6 @@ if __name__ == "__main__":
         }
     output_dict = simulate(input_json_as_dict)  # Function can handle strings or dictionaries
     print("\nOutput from JSON dictionary input: \n", output_dict)
-
-    # Example with input as a JSON-like string.
-    input_json_as_string = '{"simulate": {"k_ads": "0.5(mol/L)", "k_des": "0.1(s^-1)", "sigma_max": "1.2(<Monolayer>)", "simulation_function_label": "simulate_Langmuir_by_kadskdes"}}'
-    output_dict = simulate(input_json_as_string)  # Function can handle strings or dictionaries
-    print("\nOutput from JSON string input: \n", output_dict)
 
     # Expected Output:
     # Identical outputs for both inputs:
