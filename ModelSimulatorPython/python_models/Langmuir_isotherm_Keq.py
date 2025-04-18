@@ -7,9 +7,12 @@ import units_helper
 
 ## The simulate function should expect to receive a JSON-like dictionary or JSON-like string.
 def simulate(input_data):
-    # Check if the input is a string and convert to a dictionary if necessary
-    if isinstance(input_data, str):
+    # Ensure the input is valid json by converting it back and forth to a string.
+    try:
+        input_data = json.dumps(input_data)
         input_data = json.loads(input_data)
+    except:
+        raise TypeError("Input data is not valid JSON.")
 
     # Extract simulation parameters
     simulation_parameters = input_data["simulate"]  # Accessing directly
@@ -61,8 +64,10 @@ def simulate(input_data):
 
     # Main workflow
     simulation_result = run_simulation(input_data, K_eq_obj, sigma_max_value_and_units)
+    #Ensure the output is valid json by converting it back and forth to a string then dictionary.
     output_as_json_string = json.dumps(simulation_result, indent=4) 
-    return output_as_json_string
+    output_as_json_dict = json.loads(output_as_json_string)
+    return output_as_json_dict
                       
 if __name__ == "__main__":
     # Example with input as a JSON-like dictionary.

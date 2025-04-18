@@ -16,7 +16,7 @@
         "comments": "// The model field allows description of whether it is an elementary step model or some other kind of model. In this case, the model is a Langmuir_Isotherm model. This model requires having *either* K_E or k_ads and k_des.  The fields of k_f and k_r will only be checked if the K_E  has null as its value. The units of pressure must be expressed with a division symbol like 1/bar.",
         "model": "https://github.com/AdityaSavara/JSONGrapherExamples/blob/main/ExampleSimulators/https_simulator_link.js",
         "simulation_function_label": "simulate_Langmuir_by_kadskdes",
-        "httpsCallLink" : "https://rngnl-66-44-30-95.a.free.pinggy.link",
+        "httpsCallLink" : "https://rnjlz-66-44-30-95.a.free.pinggy.link",
         "K_eq": null,
         "sigma_max": "1.0267670459667 (mol/kg)",
         "k_ads": "200 (1/(bar * s))",

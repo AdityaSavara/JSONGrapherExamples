@@ -77,8 +77,13 @@ def handle_request(path):
         function_chosen = functions_dictionary[simulation_function_name]
         simulation_output = function_chosen(json_data)
         #just do a back and forth conversion to make sure JSON-like string is okay.
-        json_string = json.dumps(simulation_output)
-        json_dict = json.loads(json_string)
+
+        # Ensure the input is valid json by converting it back and forth to a string.
+        try:
+            json_string = json.dumps(simulation_output)
+            json_dict = json.loads(json_string)
+        except:
+            raise TypeError("Output from simulation function cannnot be converted to JSON.")
         response.set_data(json_dict)
     elif request.method == "GET":
         response = make_response("Hello, World!")
