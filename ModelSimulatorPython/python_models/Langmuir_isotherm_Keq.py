@@ -71,7 +71,7 @@ def simulate(input_dict):
     return output_as_json_dict_checked
                       
 if __name__ == "__main__":
-    # Example with input as a JSON-like dictionary.
+    ##### Test with input as a JSON-like dictionary.#####
     input_json_as_dict = {
         "simulate": {
             "K_eq": "5.0(L/mol)",  # Using K_eq directly instead of k_ads and k_des
@@ -79,19 +79,40 @@ if __name__ == "__main__":
             "simulation_function_label": "simulate_Langmuir_by_Keq"
         }
     }
-    output_dict = simulate(input_json_as_dict)  # Function can handle strings or dictionaries
-    print("\nOutput from JSON dictionary input: \n", output_dict)
+    output_dict = simulate(input_json_as_dict)  #testing with call to the primary function of this file.
+    #we can make the output look nicer for printing by converting to a string that has indents.
+    output_as_json_string = json.dumps(output_dict, indent=4)
+    print("\nOutput from JSON dictionary input: \n", output_as_json_string)
+
+    ##### Test wtih input from a JSONGrapher file #####
+    # Specify the path to your JSON file
+    JSONGrapher_record_file_path = './https_343_equilibrium.json'
+    ### The rest of this code will does not need to be changed. It will always load the simulate field from the first index.##
+    with open(JSONGrapher_record_file_path, 'r') as file:
+        # Load the JSON data into a Python dictionary
+        JSONGrapher_record_dict = json.load(file)
+    #extract the simulate sub-JSON from the first entry in "data", which is (index 0).
+    simulate_dict_from_JSONGrapher_record = JSONGrapher_record_dict["data"][0]['simulate']
+    #Now use this for our input dictionary, recalling that "simulate" must be a key in that dictionary.
+    input_json_as_dict = {"simulate": simulate_dict_from_JSONGrapher_record}
+    output_dict = simulate(input_json_as_dict)  #testing with call to the primary function of this file.
+    #We can make the output look nicer for printing by converting to a string that has indents.
+    output_as_json_string = json.dumps(output_dict, indent=4)
+    print("\nOutput from JSONGrapher file: \n", output_as_json_string)
+
 
     # Expected Output:
     # Identical outputs for both inputs:
-    # {
+    #  {
     #     "success": true,
     #     "message": "Simulation completed successfully",
     #     "data": {
     #         "simulate": {
-    #             "k_ads": "0.5(mol/L)",
-    #             "k_des": "0.1(s^-1)",
-    #             "sigma_max": "1.2(<Monolayer>)"
+    #             "simulate": {
+    #                 "K_eq": "5.0(L/mol)",
+    #                 "sigma_max": "1.2(<Monolayer>)",
+    #                 "simulation_function_label": "simulate_Langmuir_by_Keq"
+    #             }
     #         },
     #         "x": [
     #             0.026666666666666665,
@@ -115,7 +136,7 @@ if __name__ == "__main__":
     #             0.8,
     #             0.9
     #         ],
-    #         "x_label": "Pressure (1/((mol/L)/(s^-1)))",
+    #         "x_label": "Pressure (1/(L/mol))",
     #         "y_label": "Amount Adsorbed (<Monolayer>)"
     #     }
     # }
