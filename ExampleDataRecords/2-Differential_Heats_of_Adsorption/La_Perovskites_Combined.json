@@ -1,4 +1,4 @@
-{"comments":"CH4 Activation over Perovskite Catalysts","title":"CO2_Adsorption___Differential_Enthalpy",
+{"comments":"CH4 Activation over Perovskite Catalysts","datatype":"CO2_Adsorption___Differential_Enthalpy",
 "data":[
 
 {"comments":"// The curly bracket starts a data series. A file can have more than one data series. The uid is an optional unique ID and can even be a doi, for example.  The name field is the name of the series and will appear in the legend.", "uid":"45c0a40", "line":{"shape":"spline","width":3},
