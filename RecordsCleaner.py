@@ -61,7 +61,7 @@ def clean_json_dict(json_dict, fields_to_update=["title_field", "extraInformatio
     #unmodified_data = copy.deepcopy(data)
     if "title_field" in fields_to_update:
         data = update_title_field(data)
-    if extraInformation in fields_to_update:
+    if "extraInformation" in fields_to_update:
         data = remove_extra_information_field(data)
     if "nested_comments" in fields_to_update:
         data = remove_nested_comments(data)
