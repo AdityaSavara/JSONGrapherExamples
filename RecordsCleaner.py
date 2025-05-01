@@ -102,8 +102,8 @@ def clean_json_files(base_dir, max_depth=10, fields_to_update=["title_field", "e
 # Execution
 if __name__ == "__main__":
     working_dir = os.getcwd()  # Use current working directory
-    modified_files = clean_json_files(working_dir, fields_to_update=["title_field"])
-    #modified_files = clean_json_files(working_dir, fields_to_update=["extraInformation", "nested_comments"])
+    #modified_files = clean_json_files(working_dir, fields_to_update=["title_field"])
+    modified_files = clean_json_files(working_dir, fields_to_update=["extraInformation", "nested_comments"])
     
     print("\nModified JSON files:")
     for file in modified_files:
