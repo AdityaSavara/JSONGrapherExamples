@@ -3,7 +3,6 @@
     "datatype": "CO2_Adsorption___Differential_Enthalpy",
     "data": [
         {
-            "comments": "// The curly bracket starts a data series. A file can have more than one data series. The uid is an optional unique ID and can even be a doi, for example.  The name field is the name of the series and will appear in the legend.",
             "uid": "45c0a40",
             "line": {
                 "shape": "spline",
@@ -106,11 +105,9 @@
                 29.74682,
                 29.71024,
                 30.01468
-            ],
-            "extraInformation": "This is just an example of how to add extra information for a series."
+            ]
         },
         {
-            "comments": "// The curly bracket starts a data series. A file can have more than one data series. The uid is an optional unique ID and can even be a doi, for example.  The name field is the name of the series and will appear in the legend.",
             "uid": "45c0a40",
             "line": {
                 "shape": "spline",
@@ -233,11 +230,9 @@
                 22.37963,
                 25.72857,
                 18.84665
-            ],
-            "extraInformation": "This is just an example of how to add extra information for a series."
+            ]
         },
         {
-            "comments": "// The curly bracket starts a data series. A file can have more than one data series. The uid is an optional unique ID and can even be a doi, for example.  The name field is the name of the series and will appear in the legend.",
             "uid": "45c0a40",
             "line": {
                 "shape": "spline",
@@ -316,11 +311,9 @@
                 29.04986,
                 27.01142,
                 22.84674
-            ],
-            "extraInformation": "This is just an example of how to add extra information for a series."
+            ]
         },
         {
-            "comments": "// The curly bracket starts a data series. A file can have more than one data series. The uid is an optional unique ID and can even be a doi, for example.  The name field is the name of the series and will appear in the legend.",
             "uid": "45c0a40",
             "line": {
                 "shape": "spline",
@@ -369,17 +362,14 @@
                 29.76709,
                 22.09044,
                 28.89166
-            ],
-            "extraInformation": "This is just an example of how to add extra information for a series."
+            ]
         }
     ],
     "layout": {
-        "comments": "// The title field of the layout is the title of the graph (not of a series).",
         "title": {
             "text": "CO2 Differential Enthalpy of Adsorption"
         },
         "xaxis": {
-            "comments": "// The x axis title must include the units that are expected.",
             "title": {
                 "text": "Quantity Adsorbed (\u03bcmol/m2)"
             },
@@ -387,7 +377,6 @@
             "autorange": true
         },
         "yaxis": {
-            "comments": "// The y axis title must include the units that are expected.",
             "title": {
                 "text": "Adsorption_Enthalpy (kJ/mol)"
             },

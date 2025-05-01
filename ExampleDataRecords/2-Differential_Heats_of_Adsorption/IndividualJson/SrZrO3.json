@@ -3,7 +3,6 @@
     "datatype": "CO2_Adsorption___Differential_Enthalpy",
     "data": [
         {
-            "comments": "// The curly bracket starts a data series. A file can have more than one data series. The uid is an optional unique ID and can even be a doi, for example.  The name field is the name of the series and will appear in the legend.",
             "uid": "45c0a40",
             "line": {
                 "shape": "spline",
@@ -58,17 +57,14 @@
                 27.81922,
                 17.10004,
                 13.57737
-            ],
-            "extraInformation": "This is just an example of how to add extra information for a series."
+            ]
         }
     ],
     "layout": {
-        "comments": "// The title field of the layout is the title of the graph (not of a series).",
         "title": {
             "text": "CO2 Differential Enthalpy of Adsorption"
         },
         "xaxis": {
-            "comments": "// The x axis title must include the units that are expected.",
             "title": {
                 "text": "Quantity Adsorbed (\u03bcmol/m2)"
             },
@@ -76,7 +72,6 @@
             "autorange": true
         },
         "yaxis": {
-            "comments": "// The y axis title must include the units that are expected.",
             "title": {
                 "text": "Adsorption_Enthalpy (kJ/mol)"
             },
