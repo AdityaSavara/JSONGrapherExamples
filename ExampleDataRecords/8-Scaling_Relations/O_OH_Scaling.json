@@ -3,7 +3,6 @@
     "datatype": "DFT adsorption energies",
     "data": [
         {
-            "comments": "O vs OH",
             "uid": "1234100",
             "mode": "markers",
             "marker": {
@@ -115,17 +114,15 @@
                 4.709045009999997,
                 4.757155339999997,
                 5.982212809999993
-            ],
-            "extraInformation": "linear fit"
+            ]
         },
         {
-            "comments": " Linear fit",
             "uid": "1234100",
             "marker": {
                 "size": 0
             },
             "name": "100 facet: y=1.63x + 1.44",
-            "type": "line",
+            "type": "scatter",
             "x": [
                 -1.6648872700000197,
                 2.9388193199999977
@@ -133,11 +130,9 @@
             "y": [
                 -1.2753849762278522,
                 6.232802010372275
-            ],
-            "extraInformation": "linear fit"
+            ]
         },
         {
-            "comments": "O vs OH",
             "uid": "1234110",
             "mode": "markers",
             "marker": {
@@ -249,17 +244,15 @@
                 4.7515746199999995,
                 5.082935430000006,
                 5.447956660000003
-            ],
-            "extraInformation": "linear fit"
+            ]
         },
         {
-            "comments": " Linear fit",
             "uid": "1234110",
             "marker": {
                 "size": 0
             },
             "name": "110 facet: y=1.57x + 1.61",
-            "type": "line",
+            "type": "scatter",
             "x": [
                 -2.045709480000011,
                 3.009764130000005
@@ -267,22 +260,24 @@
             "y": [
                 -1.6136231327333328,
                 6.345136861860796
-            ],
-            "extraInformation": "linear fit"
+            ]
         }
     ],
     "layout": {
-        "comments": "// The title field of the layout is the title of the graph (not of a series).",
-        "title": "O vs OH adsorption on rutile transition metal oxides (10.1021/acs.jpcc.2c02381)",
+        "title": {
+            "text": "O vs OH adsorption on rutile transition metal oxides (10.1021/acs.jpcc.2c02381)"
+        },
         "xaxis": {
-            "comments": "// The x axis title must include the units that are expected.",
-            "title": "OH Adsorption Energy (eV)",
+            "title": {
+                "text": "OH Adsorption Energy (eV)"
+            },
             "showgrid": false,
             "autorange": true
         },
         "yaxis": {
-            "comments": "// The y axis title must include the units that are expected.",
-            "title": "O Adsorption Energy (eV)",
+            "title": {
+                "text": "O Adsorption Energy (eV)"
+            },
             "autorange": true,
             "gridcolor": "rgb(208, 208, 208)",
             "ticksuffix": "  "

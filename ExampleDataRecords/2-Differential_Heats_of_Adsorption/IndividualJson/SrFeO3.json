@@ -1,1 +1,55 @@
-{"comments":"CH4 Activation over Perovskite Catalysts","datatype":"CO2_Adsorption___Differential_Enthalpy","data":[{"comments":"// The curly bracket starts a data series. A file can have more than one data series. The uid is an optional unique ID and can even be a doi, for example.  The name field is the name of the series and will appear in the legend.","uid":"45c0a40","line":{"shape":"spline","width":3},"name":"SrFeO3","type":"scatter","x":[null,2.16789,4.30823,6.3777,7.99794,9.08953],"y":[null,150.71123,153.79443,143.09666,102.71411,66.13979],"extraInformation":"This is just an example of how to add extra information for a series."}],"layout":{"comments":"// The title field of the layout is the title of the graph (not of a series).","title":"CO2 Differential Enthalpy of Adsorption","xaxis":{"comments":"// The x axis title must include the units that are expected.","title":"Quantity Adsorbed (μmol/m2)","showgrid":false,"autorange":true},"yaxis":{"comments":"// The y axis title must include the units that are expected.","title":"Adsorption_Enthalpy (kJ/mol)","autorange":true,"gridcolor":"rgb(208, 208, 208)","ticksuffix":"  "},"legend":{},"autosize":true,"plot_bgcolor":"rgb(242, 242, 242)","paper_bgcolor":"rgb(242, 242, 242)"}}
+{
+    "comments": "CH4 Activation over Perovskite Catalysts",
+    "datatype": "CO2_Adsorption___Differential_Enthalpy",
+    "data": [
+        {
+            "uid": "45c0a40",
+            "line": {
+                "shape": "spline",
+                "width": 3
+            },
+            "name": "SrFeO3",
+            "type": "scatter",
+            "x": [
+                null,
+                2.16789,
+                4.30823,
+                6.3777,
+                7.99794,
+                9.08953
+            ],
+            "y": [
+                null,
+                150.71123,
+                153.79443,
+                143.09666,
+                102.71411,
+                66.13979
+            ]
+        }
+    ],
+    "layout": {
+        "title": {
+            "text": "CO2 Differential Enthalpy of Adsorption"
+        },
+        "xaxis": {
+            "title": {
+                "text": "Quantity Adsorbed (\u03bcmol/m2)"
+            },
+            "showgrid": false,
+            "autorange": true
+        },
+        "yaxis": {
+            "title": {
+                "text": "Adsorption_Enthalpy (kJ/mol)"
+            },
+            "autorange": true,
+            "gridcolor": "rgb(208, 208, 208)",
+            "ticksuffix": "  "
+        },
+        "legend": {},
+        "autosize": true,
+        "plot_bgcolor": "rgb(242, 242, 242)",
+        "paper_bgcolor": "rgb(242, 242, 242)"
+    }
+}

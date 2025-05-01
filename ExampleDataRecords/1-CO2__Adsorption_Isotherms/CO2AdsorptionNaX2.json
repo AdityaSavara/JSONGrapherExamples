@@ -1,15 +1,14 @@
-{   
+{
     "comments": "// A JSON record can have any name, and any extension (such as .txt or .json). For example, CO2AdsorptionNaX.json. The datatype field defines which schema to use. The user can create custom fields to store additional information. Remember to add a comma at the end of any fields added.",
-	"datatype": "CO2__Adsorption_Isotherm", 
+    "datatype": "CO2__Adsorption_Isotherm",
     "data": [
         {
-            "comments": "// The curly bracket starts a data series. A file can have more than one data series. The uid is an optional unique ID and can even be a doi, for example.  The name field is the name of the series and will appear in the legend.",
-			"uid": "45c0a4",
+            "uid": "45c0a4",
             "line": {
                 "shape": "spline",
                 "width": 3
-            }, 
-            "name": "CO2 Adsorption on NaX", 
+            },
+            "name": "CO2 Adsorption on NaX",
             "type": "scatter",
             "x": [
                 2007,
@@ -29,25 +28,27 @@
                 0.232447635,
                 0.580348915,
                 0.1182888421,
-                0.1928559640,
+                0.192855964,
                 0.2578825762,
                 0.3022276547
-            ],
-			"extraInformation": "This is just an example of how to add extra information for a series."
+            ]
         }
     ],
     "layout": {
-		"comments": "// The title field of the layout is the title of the graph (not of a series).",
-        "title": "CO2 Adsorption", 
+        "title": {
+            "text": "CO2 Adsorption"
+        },
         "xaxis": {
-			"comments": "// The x axis title must include the units that are expected.",
-            "title": "CO2 Pressure (Pa)", 
+            "title": {
+                "text": "CO2 Pressure (Pa)"
+            },
             "showgrid": false,
             "autorange": true
         },
         "yaxis": {
-			"comments": "// The y axis title must include the units that are expected.",
-            "title": "CO2 Adsorbed (mol/kg)",
+            "title": {
+                "text": "CO2 Adsorbed (mol/kg)"
+            },
             "autorange": true,
             "gridcolor": "rgb(208, 208, 208)",
             "ticksuffix": "  "
