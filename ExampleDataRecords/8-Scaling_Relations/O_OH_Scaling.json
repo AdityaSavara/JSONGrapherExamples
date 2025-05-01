@@ -273,16 +273,22 @@
     ],
     "layout": {
         "comments": "// The title field of the layout is the title of the graph (not of a series).",
-        "title": "O vs OH adsorption on rutile transition metal oxides (10.1021/acs.jpcc.2c02381)",
+        "title": {
+            "text": "O vs OH adsorption on rutile transition metal oxides (10.1021/acs.jpcc.2c02381)"
+        },
         "xaxis": {
             "comments": "// The x axis title must include the units that are expected.",
-            "title": "OH Adsorption Energy (eV)",
+            "title": {
+                "text": "OH Adsorption Energy (eV)"
+            },
             "showgrid": false,
             "autorange": true
         },
         "yaxis": {
             "comments": "// The y axis title must include the units that are expected.",
-            "title": "O Adsorption Energy (eV)",
+            "title": {
+                "text": "O Adsorption Energy (eV)"
+            },
             "autorange": true,
             "gridcolor": "rgb(208, 208, 208)",
             "ticksuffix": "  "

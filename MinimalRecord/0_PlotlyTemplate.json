@@ -1,11 +1,11 @@
-{   
+{
     "comments": "// A JSON record can have any name, and any extension (such as .txt or .json). For example, CO2AdsorptionNaX.json. The datatype field defines which schema to use. The user can create custom fields to store additional information. Remember to add a comma at the end of any fields added.",
-	"datatype": "", 
+    "datatype": "",
     "data": [
         {
             "comments": "// Data is a list of data series that are contained in curly brackets and comma separated. A file can have more than one data series. The uid is an optional unique ID and can even be a doi, for example.  The name field is the name of the series and will appear in the legend.",
-			"uid": "45c0a4",
-            "name": "SeriesName", 
+            "uid": "45c0a4",
+            "name": "SeriesName",
             "type": "scatter",
             "x": [
                 7,
@@ -29,19 +29,25 @@
                 2,
                 3
             ],
-			"extraInformation": "This is just an example of how to add extra information for a series."
+            "extraInformation": "This is just an example of how to add extra information for a series."
         }
     ],
     "layout": {
-		"comments": "// The title field of the layout is the title of the graph (not of a series).",
-        "title": "Chart Title", 
+        "comments": "// The title field of the layout is the title of the graph (not of a series).",
+        "title": {
+            "text": "Chart Title"
+        },
         "xaxis": {
-			"comments": "// The x axis title must include the units that are expected.",
-            "title": "x_label with units" 
+            "comments": "// The x axis title must include the units that are expected.",
+            "title": {
+                "text": "x_label with units"
+            }
         },
         "yaxis": {
-			"comments": "// The y axis title must include the units that are expected.",
-            "title": "y_label with units"
+            "comments": "// The y axis title must include the units that are expected.",
+            "title": {
+                "text": "y_label with units"
+            }
         },
         "legend": {}
     }
