@@ -24,15 +24,17 @@ function simulate(input) {
 
     // Convert a value from one unit to another
     this.getPredictedValues = function(K_eqValue, K_eqUnit, sigma_max = 1, sigma_maxUnit = "<Monolayer>") {
-        const Y = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9];
-        const X = Y.map(y => sigma_max * y / (K_eqValue * (1 - y)));
+        const Y_relative = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]; // Fractional coverage
+        const Y_absolute = Y_relative.map(y => y * sigma_max); // Convert relative coverage to absolute adsorption
+        const Y = Y_absolute;
+        const X = Y_relative.map(y => sigma_max * y / (K_eqValue * (1 - y))); // Pressure calculation
         const x_label = `Pressure (1/(${K_eqUnit}))`;
         const y_label = `Amount Adsorbed (${sigma_maxUnit})`;
 
         return {
             Y, X, x_label, y_label
-        }
-    }
+        };
+    };
 
     // Gets the K_E unit from k_ads and k_des
     // Returns an object with the following properties:
