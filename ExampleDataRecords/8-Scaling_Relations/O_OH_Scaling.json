@@ -121,6 +121,11 @@
             "marker": {
                 "size": 0
             },
+            "mode": "lines",
+            "line": {
+                "width": 4,
+                "shape": "linear"
+            },                        
             "name": "100 facet: y=1.63x + 1.44",
             "type": "scatter",
             "x": [
@@ -251,6 +256,11 @@
             "marker": {
                 "size": 0
             },
+            "mode": "lines",
+            "line": {
+                "width": 4,
+                "shape": "linear"
+            },            
             "name": "110 facet: y=1.57x + 1.61",
             "type": "scatter",
             "x": [
