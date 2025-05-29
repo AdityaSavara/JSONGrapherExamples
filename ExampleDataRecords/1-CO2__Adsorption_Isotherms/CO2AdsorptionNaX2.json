@@ -1,5 +1,6 @@
 {
     "comments": "// A JSON record can have any name, and any extension (such as .txt or .json). For example, CO2AdsorptionNaX.json. The datatype field defines which schema to use. The user can create custom fields to store additional information. Remember to add a comma at the end of any fields added.",
+    "datatype": "CO2__Adsorption_Isotherm",
     "data": [
         {
             "uid": "45c0a4",
