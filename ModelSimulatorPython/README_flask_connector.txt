@@ -9,17 +9,18 @@ To use this directory, perform the following steps:
 To use with JSONGrapher:
 (1) run the flask connector with:
 python flask_connector.py
-(2) start the pinggy ssh to http connection with:
+(2) start the pinggy ssh to http connection within another window (just press enter when asked for a passsword):
 ssh -p 443 -o StrictHostKeyChecking=no -R0:127.0.0.1:5000 a.pinggy.io x:xff x:fullurl a:origin:adityasavara.github.io x:passpreflight
-(3)Drag your JSONGrapher JSON file into JSONGrapher to initialize.
-(4)Drag your file into JSONGrapher a second time. 
+(3) copy the pinggy link and paste it into the JSONGrapher record.
+(4)Drag your JSONGrapher JSON file into JSONGrapher to initialize.
+(5)Drag your file into JSONGrapher a second time. 
 
 
 To test locally, which is useful for file creation and debugging, requires the following steps:
 
 (1) run the flask connector with:
 python flask_connector.py
-(2) start the pinggy ssh to http connection with:
+(2) start the pinggy ssh to http connection with the below command (just press enter when asked for a password):
 ssh -p 443 -o StrictHostKeyChecking=no -R0:127.0.0.1:5000 a.pinggy.io x:xff x:fullurl a:origin:adityasavara.github.io x:passpreflight
 (3) open httpsCall_local_tester.html
 (4) enter the https link
