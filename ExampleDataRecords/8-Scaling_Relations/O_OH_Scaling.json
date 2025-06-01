@@ -1,4 +1,5 @@
 {
+    "plot_style": {"trace_styles_collection":"none"},
     "comments": " Data from Catalysis-hub.org, pubId=ComerUnraveling2022",
     "datatype": "DFT adsorption energies",
     "data": [

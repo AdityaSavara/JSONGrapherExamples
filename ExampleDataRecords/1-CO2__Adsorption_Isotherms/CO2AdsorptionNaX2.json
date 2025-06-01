@@ -47,7 +47,7 @@
         },
         "yaxis": {
             "title": {
-                "text": "CO2 Adsorbed (mol/kg)"
+                "text": "CO2 Adsorbed (mol*kg**(-1))"
             },
             "autorange": true,
             "gridcolor": "rgb(208, 208, 208)",
