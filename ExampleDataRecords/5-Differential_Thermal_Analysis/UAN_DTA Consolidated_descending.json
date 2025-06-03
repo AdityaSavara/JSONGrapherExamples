@@ -1,6 +1,7 @@
 {
     "comments": "Differential Thermal Analysis (DTA) of aqueous urea ammonium nitrate data published in https://dx.doi.org/10.1016/j.fuel.2015.06.099",
     "datatype": "Differential_Thermal_Analysis",
+    "plot_style": {"trace_styles_collection":"none"},
     "data": [
         {
             "uid": "45c0a40",
