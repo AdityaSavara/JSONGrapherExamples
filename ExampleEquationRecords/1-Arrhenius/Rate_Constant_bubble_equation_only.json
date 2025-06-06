@@ -1,0 +1,64 @@
+{
+    "comments": "",
+    "datatype": "",
+    "data": [
+        {
+            "uid": "",
+            "name": "Arrhenius Example 3D plot",
+            "trace_style": "bubble",
+            "equation": {
+                "equation_string": "k = A*(e**((-Ea)/(R*T)))",
+                "x_variable": "T (K)",
+                "y_variable": "Ea (J*mol^(-1))",
+                "constants": {
+                    "R": "8.314 (J*mol^(-1)*K^(-1))",
+                    "A": "1*10^13 (s^(-1))",
+                    "e": "2.71828"
+                },
+                "num_of_points": 10,
+                "x_range_default": [
+                    200,
+                    500
+                ],
+                "x_range_limits": [],
+                "x_points_specified": [],
+                "points_spacing": "Linear",
+                "reverse_scaling": false,
+                "graphical_dimensionality": 3,
+                "z_variable": "k (s**(-1))",
+                "y_range_default": [
+                    30000,
+                    50000
+                ],
+                "y_range_limits": [],
+                "verbose": true,
+                "x_units": "(K)",
+                "y_units": "(J*mol^(-1))"
+            },
+            "max_bubble_size": 150
+        }
+    ],
+    "layout": {
+        "title": {
+            "text": "Bubble plot for Ea vs Temperature Behavior for a Rate Constant"
+        },
+        "xaxis": {
+            "title": {
+                "text": "T (K)"
+            }
+        },
+        "yaxis": {
+            "title": {
+                "text": "Ea (J*mol^(-1))"
+            }
+        },
+        "zaxis": {
+            "title": {
+                "text": "k (s**(-1))"
+            }
+        }
+    },
+    "plot_style": {
+        "layout_style": "default"
+    }
+}
