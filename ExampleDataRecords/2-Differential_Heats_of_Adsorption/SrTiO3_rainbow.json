@@ -1,0 +1,99 @@
+{
+    "comments": "CH4 Activation over Perovskite Catalysts",
+    "datatype": "CO2_Adsorption___Differential_Enthalpy",
+    "data": [
+        {
+            "uid": "45c0a40",
+            "line": {
+                "shape": "spline",
+                "width": 3
+            },
+            "name": "SrTiO3",
+            "trace_style": "scatter__jet",
+            "x": [
+                null,
+                0.05547,
+                0.13807,
+                0.56631,
+                0.99147,
+                1.40664,
+                1.80813,
+                2.20376,
+                2.58534,
+                2.95326,
+                3.31705,
+                3.68087,
+                4.03874,
+                4.39576,
+                4.74996,
+                5.10464,
+                5.45752,
+                5.80826,
+                6.13505,
+                6.35192,
+                6.50123,
+                6.61808,
+                6.71532,
+                6.79716,
+                6.87021,
+                7.02597,
+                7.15811,
+                7.27229
+            ],
+            "y": [
+                null,
+                206.03481,
+                175.50105,
+                158.27305,
+                138.63502,
+                146.81142,
+                139.03103,
+                151.25592,
+                142.12822,
+                140.21193,
+                139.18714,
+                133.06801,
+                136.75931,
+                142.56855,
+                130.7049,
+                133.81181,
+                125.04767,
+                131.99635,
+                84.84064,
+                56.84628,
+                46.42017,
+                38.94254,
+                36.99933,
+                45.90013,
+                44.90997,
+                43.14029,
+                48.45042,
+                53.29011
+            ]
+        }
+    ],
+    "layout": {
+        "title": {
+            "text": "CO2 Differential Enthalpy of Adsorption"
+        },
+        "xaxis": {
+            "title": {
+                "text": "Quantity Adsorbed (µmol*m^(-2))"
+            },
+            "showgrid": false,
+            "autorange": true
+        },
+        "yaxis": {
+            "title": {
+                "text": "Adsorption_Enthalpy (kJ*mol**(-1))"
+            },
+            "autorange": true,
+            "gridcolor": "rgb(208, 208, 208)",
+            "ticksuffix": "  "
+        },
+        "legend": {},
+        "autosize": true,
+        "plot_bgcolor": "rgb(242, 242, 242)",
+        "paper_bgcolor": "rgb(242, 242, 242)"
+    }
+}
