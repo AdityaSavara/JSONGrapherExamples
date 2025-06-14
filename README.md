@@ -1,5 +1,7 @@
 # JSONGrapherExamples
- Example files for JSON Grapher (www.jsongrapher.com)
+Example files for JSON Grapher (www.jsongrapher.com)
+
+First, extract or copy files to a fresh directory after downloading. Files must be outside of a zipfile to work with JSONGrapher. 
 
 ExampleDataRecords includes example JSON Records of data that can be plotted in JSONGrapher, sorted by subdirectories.
 The file 0_PlotlyTemplate.json provides a basic example.
