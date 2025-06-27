@@ -1,11 +1,11 @@
 {
     "comments": "",
-    "datatype": "Arrhenius_plot_3D",
+    "datatype": "Arrhenius_plot_4D",
     "data": [
         {
             "uid": "",
-            "name": "Arrhenius Example 3D plot",
-            "trace_style": "bubble__Viridis",
+            "name": "Arrhenius Example 4D plot",
+            "trace_style": "bubble2d__Viridis",
             "type": "scatter",
             "max_bubble_size": 100,
             "x": [
