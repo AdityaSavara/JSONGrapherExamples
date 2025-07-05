@@ -55,7 +55,7 @@ function simulate(input) {
         const Y_absolute = Y_relative.map(y => y * sigma_max); // Convert relative coverage to absolute adsorption
         const Y = Y_absolute;
         const X = Y_relative.map(y => sigma_max * y / (K_eqValue * (1 - y))); // Pressure calculation
-        const x_label = `Pressure (1/(${K_eqUnit}))`;
+        const x_label = `Pressure ((${K_eqUnit})^(-1))`;
         const y_label = `Amount Adsorbed (${sigma_maxUnit})`;
 
         return {
