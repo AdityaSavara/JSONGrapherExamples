@@ -7,20 +7,41 @@ function simulate(input) {
     // Returns an object with the following properties:
     //  - value: the value 
     //  - units: the unit
-    this.parseUnit = function(value){
+    this.parseUnit = function(value) {
+        // Function to check for balanced parentheses
+        function hasBalancedParens(str) {
+            let depth = 0;
+            for (let char of str) {
+                if (char === '(') depth++;
+                else if (char === ')') depth--;
+                if (depth < 0) return false; // More closing than opening
+            }
+            return depth === 0;
+        }
+
+        // Check for balanced parentheses before parsing
+        if (!hasBalancedParens(value)) {
+            return {
+                value: NaN,
+                unit: '',
+                error: 'Unbalanced parentheses'
+            };
+        }
+
         var regex = /\(([^)]+)\)/;
         var match = regex.exec(value);
         if (match != null) {
             return {
                 value: parseFloat(value.replace('(' + match[1] + ')', '')),
-                unit: match[1], 
+                unit: match[1],
             };
         }
         return {
             value: parseFloat(value),
             unit: '',
         };
-    }
+    };
+
 
     // Convert a value from one unit to another
     this.getPredictedValues = function(K_eqValue, K_eqUnit, sigma_max = 1, sigma_maxUnit = "<Monolayer>") {
