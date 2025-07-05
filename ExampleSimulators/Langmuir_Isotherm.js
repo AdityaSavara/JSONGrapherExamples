@@ -14,7 +14,7 @@ function simulate(input) {
             for (let char of str) {
                 if (char === '(') depth++;
                 else if (char === ')') depth--;
-                if (depth < 0) return false; // More closing than opening
+                if (depth < 0) return false;
             }
             return depth === 0;
         }
@@ -28,17 +28,23 @@ function simulate(input) {
             };
         }
 
-        var regex = /\(([^)]+)\)/;
-        var match = regex.exec(value);
-        if (match != null) {
+        // Find the first '(' and last ')'
+        const start = value.indexOf('(');
+        const end = value.lastIndexOf(')');
+
+        if (start !== -1 && end !== -1 && end > start) {
+            const unit = value.slice(start + 1, end);
+            const numericPart = value.slice(0, start).trim();
             return {
-                value: parseFloat(value.replace('(' + match[1] + ')', '')),
-                unit: match[1],
+                value: parseFloat(numericPart),
+                unit: unit
             };
         }
+
+        // No parentheses found
         return {
             value: parseFloat(value),
-            unit: '',
+            unit: ''
         };
     };
 
