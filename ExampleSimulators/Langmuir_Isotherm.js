@@ -77,7 +77,7 @@ function simulate(input) {
         const K_eq = k_adsValue / k_desValue;
         return {
             value: K_eq,
-            unit: "(" + k_adsUnit + ")/(" + k_desUnit + ")",
+            unit: "( (" + k_adsUnit + ")*(" + k_desUnit + ")^(-1) )",
         };
     }
 
